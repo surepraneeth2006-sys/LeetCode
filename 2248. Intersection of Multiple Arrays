@@ -1,0 +1,9 @@
+class Solution:
+    def intersection(self, nums: List[List[int]]) -> List[int]:
+        result = []
+
+        for num in nums[0]:
+            if all(num in arr for arr in nums):
+                result.append(num)
+
+        return sorted(result)
